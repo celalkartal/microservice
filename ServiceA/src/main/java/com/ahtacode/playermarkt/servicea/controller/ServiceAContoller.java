@@ -1,6 +1,7 @@
 package com.ahtacode.playermarkt.servicea.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,12 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/service")
 public class ServiceAContoller {
 	
+	@Autowired
+	private Environment env;
+	
 	@Autowired 
 	ServiceBFeign serviceBFeign;
 	
 	@GetMapping("/A")
 	public String getServicea() {
-		return "ServiceA Data";
+		return "ServiceA Data " +  env.getProperty("server.port");
 	}
 	
 	@GetMapping("/A2")

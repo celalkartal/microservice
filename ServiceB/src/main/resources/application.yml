@@ -2,7 +2,7 @@ spring:
   application:
     name: playermarkt-service-b
 server:
-  port: 0
+  port: 8976
 eureka:
   client:
     serviceUrl:

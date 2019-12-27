@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j // lombok plugin jar should be added to Eclipse IDE .exe location 
 public class ServiceBController {
 
+	
 	@Autowired
 	ServiceAFeign serviceAFeign;
 

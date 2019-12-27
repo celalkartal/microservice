@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface ServiceAFeign {
 
 	@RequestMapping("/service/A")
-	String getServiceAData(); 
+	String getServiceAData();
+	
 	@RequestMapping("/service/A2")
 	String getServiceAData2();
 }
