@@ -20,7 +20,7 @@ public class ServiceBController {
 	public String getServiceBData() {
 		String serviceAData = serviceAFeign.getServiceAData();
 		serviceAData += " was used in Service B";
-		log.info("ServiceB called ServiceA");
+		log.info("ServiceB called ServiceA test.");
 		return serviceAData;
 	}
 
