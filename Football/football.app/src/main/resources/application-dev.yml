@@ -1,0 +1,41 @@
+spring:
+  message: Hello from Dev Environment
+  profiles: dev
+  datasource:
+    db:
+      jdbc-url: jdbc:sqlserver://TRISTSQL-DEV;databaseName=RIX_DEV_AODB;integratedSecurity=false;sendTimeAsDateTime=false;
+      username: RIX_TEST
+      password: hx75CRE9
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jpa:
+        hibernate:
+          ddl-auto: none
+        show-sql: true
+        properties:
+          hibernate.format_sql: true
+          hibernate.hbm2ddl.auto: update
+        databasePlatform: org.hibernate.dialect.SQLServer2012Dialect
+        
+security:
+  oauth2:
+    client:
+      clientId: 233668646673605
+      clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
+      
+      
+logging:
+  level:
+    org.springframework.web: FATAL
+    org.hibernate.stat: FATAL
+    org.hibernate: FATAL
+    org.hibernate.type: TRACE # for query parameters
+    org.springframework.web.socket: FATAL
+    org.springframework.web.socket.sockjs.DisconnectedClient: TRACE
+

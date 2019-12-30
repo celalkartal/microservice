@@ -1,0 +1,9 @@
+logging:
+  level:
+    org.springframework.web: FATAL
+    org.hibernate.stat: FATAL
+    org.hibernate: FATAL
+    org.hibernate.type: TRACE # for query parameters
+    org.springframework.web.socket: FATAL
+    org.springframework.web.socket.sockjs.DisconnectedClient: TRACE
+
