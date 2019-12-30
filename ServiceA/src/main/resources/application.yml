@@ -1,6 +1,9 @@
 spring:
   application:
     name: playermarkt-service-a
+feign:
+  hystrix:
+    enabled: true
 server:
   port: 0
 eureka:
